@@ -32,10 +32,10 @@ def gen(camera):
 
 @app.route('/video_feed')
 def video_feed():
-	url = 'http://usta:111111aa@192.168.1.101:7777/video'
+	url = 'http://116.89.189.30:7000/video'
 	test = gen(VideoCamera(url))
 	return Response(test, mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', debug=True)
+	app.run(host='116.89.189.30', port=7000, debug=True)
